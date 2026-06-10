@@ -99,16 +99,4 @@ src/
 └── test/
 ```
 
----
 
-## Desenvolvido por
-
-**Mateus Cravari**  
-Desenvolvedor Back-end em Formação · Java · Spring Boot · SQL
-
-- Estudante de ADS — UNINOVE (previsão jun/2027)
-- +2 anos de experiência com ERP TOTVS Protheus (módulos de compras e faturamento)
-- Gestão de KPIs de fornecedores, relatórios gerenciais e análise de dados em Excel
-
-Email: mateuscravari@gmail.com
- \ Linkedin: www.linkedin.com/in/mateus-cravari-5b5889211
