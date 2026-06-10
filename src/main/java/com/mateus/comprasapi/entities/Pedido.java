@@ -8,14 +8,15 @@ public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
 
     private String descricao;
 
     private Double valor;
     
-    @ManyToOne
-    @JoinColumn(name = "fornecedor_id")
+    @ManyToOne  // ManyToOne = muitos pedidos podem ter um mesmo fornecedor.
+    @JoinColumn(name = "fornecedor_id") //função que armazena o id do fornecedor.
     private Fornecedor fornecedor;
     
     public Pedido() {
@@ -52,5 +53,6 @@ public class Pedido {
     public void setFornecedor(Fornecedor fornecedor) {
         this.fornecedor = fornecedor;
     }
+    
 
 }

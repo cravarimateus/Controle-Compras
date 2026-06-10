@@ -2,12 +2,13 @@ package com.mateus.comprasapi.entities;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "fornecedores")
+@Entity // Define que essa classe é uma tabela no banco de dados
+@Table(name = "fornecedores") 
 public class Fornecedor {
 
-    @Id
+    @Id // Define que este campo é a chave primária e gera o ID automaticamente.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
 
     private String nome;
@@ -18,8 +19,7 @@ public class Fornecedor {
 
     private String telefone;
 
-    public Fornecedor() {
-    }
+    public Fornecedor() {}
 
     public Long getId() {
         return id;

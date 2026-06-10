@@ -9,9 +9,6 @@ public class ComprasApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ComprasApiApplication.class, args);
 		
-		System.out.println("Programa rodando");
-		
-		
 		
 		
 		

@@ -15,16 +15,34 @@ public class FornecedorService {
     private FornecedorRepository repository;
 
     public List<Fornecedor> listarTodos() {
-        return repository.findAll();
+        return repository.findAll(); // Busca todos os fornecedores
     }
     
     public Fornecedor salvar(Fornecedor fornecedor) {
-        return repository.save(fornecedor);
+        return repository.save(fornecedor); // Salva ou atualiza
     }
     
     public Fornecedor buscarPorId(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElse(null);        
     }
-	
     
+    public Fornecedor atualizar(Long id, Fornecedor fornecedorAtualizado) {
+
+        Fornecedor fornecedor = repository.findById(id).orElse(null);
+
+        if (fornecedor != null) {
+            fornecedor.setNome(fornecedorAtualizado.getNome());
+            fornecedor.setCnpj(fornecedorAtualizado.getCnpj());
+            fornecedor.setEmail(fornecedorAtualizado.getEmail());
+            fornecedor.setTelefone(fornecedorAtualizado.getTelefone());
+
+            return repository.save(fornecedor);
+        }
+
+        return null;
+    }
+    
+    public void deletar(Long id) {
+        repository.deleteById(id);
+    }
 }
